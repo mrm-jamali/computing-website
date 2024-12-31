@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+
+  <title>Mechanical calculations </title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css" />
+  <link rel="stylesheet" href="assets/css/templatemo-style.css" />
+  <link rel="stylesheet" href="assets/css/owl.css" />
+  <link rel="stylesheet" href="assets/css/lightbox.css" />
+  <link rel="stylesheet" href="assets/css/style3.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+  <link rel="stylesheet" href="assets/css/form.css">
+</head>
+
+<body>
+  <div id="page-wraper">
+    <div class="nav-login">
+      <div class="title-nav">
+        <h3>wellcome to ComputeNM</h3>
+      </div>
+      <div class="reg-part">
+        <button class="btn-sign1">sign up</button>
+      </div>
+      <div class="sign-part ">
+        <button class="btn-sign2">sign in</button>
+      </div>
+
+
+    </div>
+    <!-- form -->
+    <form class="form" id="registerForm" style="display: none;">
+      <span id="close-btn"><svg width="42px" height="42px" viewBox="0 0 24 24" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <g id="Menu / Close_SM">
+              <path id="Vector" d="M16 16L12 12M12 12L8 8M12 12L16 8M12 12L8 16" stroke="#05AA6D" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+          </g>
+        </svg></span>
+      <p class="title">Register</p>
+      <p class="message">Signup now and get full access to our app.</p>
+      <div class="flex">
+        <label>
+          <input class="input" type="text" id="firstname" placeholder="" required="">
+          <span>Firstname</span>
+        </label>
+
+        <label>
+          <input class="input" type="text" id="lastname" placeholder="" required="">
+          <span>Lastname</span>
+        </label>
+      </div>
+
+      <label>
+        <input class="input" type="email" id="email" placeholder="" required="">
+        <span>Email</span>
+      </label>
+
+      <label>
+        <input class="input" type="password" id="password" placeholder="" required="">
+        <span>Password</span>
+      </label>
+
+      <label>
+        <input class="input" type="password" id="confirmPassword" placeholder="" required="">
+        <span>Confirm password</span>
+      </label>
+
+      <button class="submit" type="submit">sign up</button>
+      <p class="signin">Already have an account? <a href="#">Signin</a></p>
+    </form>
+
+
+
+    <div id="successMessage" style="display: none; color: green;">Registration successful!</div>
+
+
+    <form class="form" id="signinForm" style="display: none;">
+      <span id="close-btn2"><svg width="42px" height="42px" viewBox="0 0 24 24" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <g id="Menu / Close_SM">
+              <path id="Vector" d="M16 16L12 12M12 12L8 8M12 12L16 8M12 12L8 16" stroke="#05AA6D" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"></path>
+            </g>
+          </g>
+        </svg></span>
+      <p class="title">Sign In</p>
+      <p class="message">wellcome</p>
+      <!-- <div class="flex">
+        <label>
+          <input class="input" type="text" id="firstname" placeholder="" required="">
+          <span>Firstname</span>
+        </label>
+
+        <label>
+          <input class="input" type="text" id="lastname" placeholder="" required="">
+          <span>Lastname</span>
+        </label>
+      </div> -->
+
+      <label>
+        <input class="input" type="email" id="email" placeholder="" required="">
+        <span>Email</span>
+      </label>
+
+      <label>
+        <input class="input" type="password" id="password" placeholder="" required="">
+        <span>Password</span>
+      </label>
+
+      <!-- <label>
+        <input class="input" type="password" id="confirmPassword" placeholder="" required="">
+        <span>Confirm password</span>
+      </label> -->
+
+      <button class="submit" type="submit">sign up</button>
+      <p class="signin">Already have an account? <a href="#">Signin</a></p>
+    </form>
+
+
+    <!-- Sidebar Menu -->
+    <div class="responsive-nav">
+      <i class="fa fa-bars" id="menu-toggle"></i>
+      <div id="menu" class="menu">
+        <i class="fa fa-times" id="menu-close"></i>
+        <div class="container">
+          <div class="logo">
+            <span id="logo-section">
+              <svg class="icon" width="60px" height="60px" viewBox="0 -12.5 256 256" version="1.1"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                preserveAspectRatio="xMidYMid" fill="#000000">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <g>
+                    <path
+                      d="M75.390147,0 C67.1964365,0.144249443 59.6926147,4.61940312 55.670735,11.7594655 L55.670735,11.7594655 L3.05275724,102.995813 C-1.01758575,110.07943 -1.01758575,118.791982 3.05275724,125.875029 L3.05275724,125.875029 L55.6507795,217.871964 C59.631608,225.111234 67.1149042,229.733488 75.3696214,230.052205 L75.3696214,230.052205 L180.586192,230.052205 C188.840909,229.768267 196.337889,225.164829 200.325559,217.932401 L200.325559,217.932401 L252.923581,126.455448 C254.973292,122.857194 255.997862,118.851278 255.997862,114.845933 L255.997862,114.845933 C255.997862,110.840588 254.973292,106.834673 252.923581,103.235849 L252.923581,103.235849 L200.325559,11.7594655 C196.300829,4.6222539 188.799287,0.148240535 180.606147,0 L180.606147,0 L75.390147,0 Z"
+                      fill="#04AA6D"> </path>
+                    <path
+                      d="M236.495178,155.027249 L200.325559,217.932401 C196.337889,225.164829 188.840909,229.768267 180.586192,230.052205 L140.510158,230.052205 L82.0381078,171.057147 L99.2756312,115.473789 L82.0381078,59.2541363 L99.743159,71.1470183 L123.548878,95.1659759 L112.429128,59.2541363 L195.804166,115.261691 L236.495178,155.027249 Z"
+                      fill-opacity="0.07" fill="#04AA6D000000" fill-rule="nonzero"> </path>
+                    <path
+                      d="M82.0382788,59.2539082 L99.7433301,71.1473604 L113.622065,115.765481 L99.9902076,159.043164 L82.0382788,171.05749 L99.3807109,115.261463 L82.0382788,59.2539082 Z M127.385457,79.0899171 L135.977707,106.881596 L168.966927,106.881596 L127.385457,79.0899171 Z M195.804166,115.261748 L112.429128,171.057204 L129.77156,115.261748 L112.429128,59.2536232 L195.804166,115.261748 Z"
+                      fill="#04AA6DFFFFFF"> </path>
+                  </g>
+                </g>
+              </svg>
+            </span>
+            <p class="logo-text">ComputeNM</p>
+          </div>
+
+
+          <div class="nav-menu mb-5 mt-5">
+            <div class="inside-nav">
+              <ul>
+                <li><a href="models.html" style="color:white">Models</a></li>
+                <li><a href="#" style="color:white">balancing methods</a></li>
+                <li><a href="#" style="color:white"> How to Select Models?</a></li>
+                <li><a href="#" style="color:white">Weblog</a></li>
+                <li><a href="#" style="color:white">login</a></li>
+              </ul>
+
+            </div>
+          </div>
+          <nav class="main-nav mt-2" role="navigation">
+            <ul class="main-menu">
+              <li><a href="#section1">Model 01: Static Balance</a></li>
+              <li><a href="#section2">Model 02: Basic solid 4-run</a></li>
+              <li><a href="#section3">Model 03: Basic Flex 4-run
+                </a></li>
+              <li><a href="#section4">Model 04: Influence Factor</a></li>
+            </ul>
+          </nav>
+          <div class="social-network">
+            <ul class="soial-icons" style="margin-top: -20px;">
+              <li>
+                <a href="https://fb.com/templatemo"><i class="fa fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-rss"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="copyright-text">
+            <p>Designed by Maryam Jamali </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <!-- section 1-type of models -->
+    <section class="section my-services" data-section="section1">
+      <div class="container">
+        <div class="section-heading">
+          <h2>About Us</h2>
+          <div class="line-dec"></div>
+          <span>We will express the output speed in two ways. The free speed is the mechanism's output speed when no
+            load is connected. The loaded speed is the output speed when the load force is applied. These speeds
+            can be expressed as either linear velocities, vf ree and vload, or rotational velocities, ωf ree and ωload.
+            In
+            all cases, the speed in question is a steady-state speed, meaning the mechanism has been powered on for
+            enough time to reach it's speed. It does not take into account the acceleration of the mechanism
+            while in start-up or as the load changes</span>
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+    <section class="section about-me" data-section="section2">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Model 02: Basic Solid 4-run
+          </h2>
+          <div class="line-dec"></div>
+          <span>This model provide simple calculations for 4-run method of balancing. To perform balancing with this
+            method, you
+            need a simple vibrometer that can measure the vibration level. Using RMS value of velocity is preferred. In
+            this
+            model, the position of trial mass are solid (Angles 0, 120, and 240)
+          </span>
+          <span class="justify-self-end">
+            <button class="btn-service-item mt-5 ">Read more about the procedure</button>
+          </span>
+        </div>
+        <div class="row ">
+
+          <div class=" col-lg-12 col-md-12 text-center">
+            <div class="service-item d-flex" class="text-left">
+
+              <div class="first-col ">
+
+                <span style="display: flex;width: 100;font-size: 19px;">inputs:</span>
+                <div class="inputs-item">
+                  <label>Rotation Direction: </label>
+
+                  <select name="cars" id="cars">
+                    <option value="volvo">CCW</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                </div>
+
+                <div class="inputs-item">
+                  <label>Vibration Unit: </label>
+                  <select name="cars" id="cars">
+                    <option value="volvo">mm/s</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                </div>
+
+                <div class="inputs-item">
+                  <label>Temporary Trial Mass:</label>
+                  <div class="left-part">
+                    <span>mt= </span>
+                    <input type="text" class="">
+                    <select name="cars" id="cars">
+                      <option value="volvo">gr</option>
+                      <option value="saab">Saab</option>
+                      <option value="mercedes">Mercedes</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="inputs-item">
+                  <label>Initial Run: </label>
+                  <div class="left-part">
+                    <span>v<sub>0</sub>=</span>
+                    <input type="text" class="">
+
+                  </div>
+                </div>
+                <div class="inputs-item">
+                  <label>1st Trial Run </label>
+                  <div class="left-part">
+                    <span>v<sub>A</sub>=</span>
+                    <input type="text" class="">
+
+                  </div>
+                </div>
+                <div class="inputs-item">
+                  <label>second Trial Run </label>
+                  <div class="left-part">
+                    <span>v<sub>B</sub>=</span>
+                    <input type="text" class="">
+
+                  </div>
+                </div>
+                <div class="inputs-item">
+                  <label class="text-left">Thirt Trial Run</label>
+                  <div class="left-part">
+                    <span>v<sub>C</sub>=</span>
+                    <input type="text" class="">
+
+                  </div>
+                </div>
+
+
+
+                <div class="buttons-service-item">
+                  <button class="btn-service-item">Fill Sample Example</button>
+                  <button class="btn-service-item">Clear</button>
+                  <button class="btn-service-item">Calculate</button>
+                </div>
+
+
+              </div>
+              <div class="seccond-col">
+                <div class="insid-part-photo">
+                  <img src="assets/images/Arc.png">
+                </div>
+
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- section 2-form1 -->
+    <section class="section about-me" data-section="section3">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Model 02: Basic Solid 4-run</h2>
+          <div class="line-dec"></div>
+          <span>This model provide simple calculations for 4-run method of balancing. To perform balancing with this
+            method, you
+            need a simple vibrometer that can measure the vibration level. Using RMS value of velocity is preferred. In
+            this
+            model, the position of trial mass are solid (Angles 0, 120, and 240)
+          </span>
+          <span class="justify-self-end">
+            <button class="btn-service-item mt-5 ">Read more about the procedure</button>
+          </span>
+        </div>
+
+        <div class="row ">
+
+          <div class=" col-lg-12 col-md-12 text-center">
+            <div class="service-item d-flex" class="text-left">
+
+              <div class="first-col ">
+
+                <span style="display: flex;width: 100;font-size: 19px;">inputs:</span>
+                <div class="inputs-item">
+                  <label>Rotation Direction: </label>
+
+                  <select name="cars" id="cars">
+                    <option value="volvo">CCW</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                </div>
+
+                <div class="inputs-item">
+                  <label>Vibration Unit: </label>
+                  <select name="cars" id="cars">
+                    <option value="volvo">mm/s</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                </div>
+
+                <div class="inputs-item">
+                  <label>Temporary Trial Mass:</label>
+                  <div class="left-part">
+                    <span>mt= </span>
+                    <input type="text" class="">
+                    <select name="cars" id="cars">
+                      <option value="volvo">gr</option>
+                      <option value="saab">Saab</option>
+                      <option value="mercedes">Mercedes</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="inputs-item">
+                  <label>Initial Run: </label>
+                  <div class="left-part">
+                    <span>v<sub>0</sub>=</span>
+                    <input type="text" class="">
+
+                  </div>
+                </div>
+                <div class="inputs-item">
+                  <label>1st Trial Run </label>
+                  <div class="left-part">
+                    <span>v<sub>A</sub>=</span>
+                    <input type="text" class="">
+
+                  </div>
+                </div>
+                <div class="inputs-item">
+                  <label>second Trial Run </label>
+                  <div class="left-part">
+                    <span>v<sub>B</sub>=</span>
+                    <input type="text" class="">
+
+                  </div>
+                </div>
+                <div class="inputs-item">
+                  <label class="text-left">Thirt Trial Run</label>
+                  <div class="left-part">
+                    <span>v<sub>C</sub>=</span>
+                    <input type="text" class="">
+
+                  </div>
+                </div>
+
+
+
+                <div class="buttons-service-item">
+                  <button class="btn-service-item">Fill Sample Example</button>
+                  <button class="btn-service-item">Clear</button>
+                  <button class="btn-service-item">Calculate</button>
+                </div>
+
+
+              </div>
+              <div class="seccond-col">
+                <div class="insid-part-photo">
+                  <img src="assets/images/Arc.png">
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+
+        </div>
+        <div class="last-part" style="width:100%;">
+          <h4 style="color:black;margin-left:10px;">result</h4>
+          <div class="service-item" class="text-left" style="padding-top:0;">
+
+            <div class="first-col">
+              <div class="inputs-item">
+                <label>Correction Mass Value:</label>
+                <div class="left-part">
+                  <span>v<sub>B</sub>=</span>
+                  <input type="text" class="">
+                  <span style="margin-left: 10px;">mm/s</span>
+                </div>
+              </div>
+              <div class="inputs-item">
+                <label class="text-left"> Correction Mass Position:</label>
+                <div class="left-part">
+                  <span>v<sub>C</sub>=</span>
+                  <input type="text" class="">
+                  <span style="margin-left: 10px;">degree</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="seccond-col" style="display: flex;justify-content: center;">
+              <div class="insid-part-photo" style="margin-top:20px;">
+                <img src="assets/images/Arc.png">
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+
+
+
+    <!-- section 3-form2 -->
+    <section class="section about-me" data-section="section4">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Model 03: Basic Flexible 4-run
+          </h2>
+          <div class="line-dec"></div>
+          <span>This model provide simple calculations for 4-run method of balancing. To perform balancing with this
+            method, you
+            need a simple vibrometer that can measure the vibration level. Using RMS value of velocity is preferred. In
+            this
+            model, the position of trial mass are flexible and determined by the user. It is suggested to consider
+            minimum 90
+            degree between mounting positions. All mounting positions must have same radius.</span>
+          <span class="justify-self-end">
+            <button class="btn-service-item mt-5 ">Read more about the procedure</button>
+          </span>
+        </div>
+
+        <div class="row ">
+
+          <div class=" col-lg-12 col-md-12 text-center">
+            <div class="service-item" class="text-left">
+
+              <div class="first-col">
+
+                <span style="display: flex;width: 100;font-size: 19px;">inputs:</span>
+                <div class="inputs-item">
+                  <label>Rotation Direction: </label>
+
+                  <select name="cars" id="cars">
+                    <option value="volvo">CCW</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                </div>
+
+                <div class="inputs-item">
+                  <label>Vibration Unit: </label>
+                  <select name="cars" id="cars">
+                    <option value="volvo">mm/s</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                </div>
+
+                <div class="inputs-item">
+                  <label>Temporary Trial Mass:</label>
+                  <div class="left-part">
+                    <span>mt= </span>
+                    <input type="text" class="">
+                    <select name="cars" id="cars">
+                      <option value="volvo">mm/s</option>
+                      <option value="saab">Saab</option>
+                      <option value="mercedes">Mercedes</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="inputs-item">
+                  <label>Initial Run: </label>
+                  <div class="left-part">
+                    <span>v<sub>0</sub>=</span>
+                    <input type="text" class="">
+                    <span style="margin-left: 10px;">mm/s</span>
+                  </div>
+                </div>
+                <div class="inputs-item">
+                  <label>1st Trial Run Position</label>
+                  <div class="left-part">
+                    <span>v<sub>A</sub>=</span>
+                    <input type="text" class="">
+                    <span style="margin-left: 10px;">degree</span>
+                  </div>
+                </div>
+                <div class="inputs-item">
+                  <label>1st Trial Run vibration</label>
+                  <div class="left-part">
+                    <span>v<sub>B</sub>=</span>
+                    <input type="text" class="">
+                    <span style="margin-left: 10px;">mm/s</span>
+                  </div>
+                </div>
+                <div class="inputs-item">
+                  <label class="text-left">2nd Trial Run Position</label>
+                  <div class="left-part">
+                    <span>v<sub>C</sub>=</span>
+                    <input type="text" class="">
+                    <span style="margin-left: 10px;">degree</span>
+                  </div>
+                </div>
+                <div class="inputs-item">
+                  <label class="text-left">2nd Trial Run Vibration</label>
+                  <div class="left-part">
+                    <span>v<sub>C</sub>=</span>
+                    <input type="text" class="">
+                    <span style="margin-left: 10px;">mm/s</span>
+                  </div>
+                </div>
+                <div class="inputs-item">
+                  <label class="text-left">3nd Trial Run Position</label>
+                  <div class="left-part">
+                    <span>v<sub>C</sub>=</span>
+                    <input type="text" class="">
+                    <span style="margin-left: 10px;">degree</span>
+                  </div>
+                </div>
+                <div class="inputs-item">
+                  <label class="text-left">3nd Trial Run Vibration</label>
+                  <div class="left-part">
+                    <span>v<sub>C</sub>=</span>
+                    <input type="text" class="">
+                    <span style="margin-left: 10px;">mm/s</span>
+                  </div>
+                </div>
+
+                <div class="buttons-service-item">
+                  <button class="btn-service-item">Fill Sample Example</button>
+                  <button class="btn-service-item">Clear</button>
+                  <button class="btn-service-item">Calculate</button>
+                </div>
+              </div>
+              <div class="seccond-col">
+                <div class="insid-part-photo">
+                  <img src="assets/images/Arc.png">
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- section 4 -->
+    <section class="section about-me" data-section="section5">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Model 03: Basic Flexible 4-run
+          </h2>
+          <div class="line-dec"></div>
+          <span>This model provide simple calculations for 4-run method of balancing. To perform balancing with this
+            method, you
+            need a simple vibrometer that can measure the vibration level. Using RMS value of velocity is preferred. In
+            this
+            model, the position of trial mass are flexible and determined by the user. It is suggested to consider
+            minimum 90
+            degree between mounting positions. All mounting positions must have same radius.</span>
+          <span class="justify-self-end">
+            <button class="btn-service-item mt-5 ">Read more about the procedure</button>
+          </span>
+        </div>
+
+        <div class="row ">
+
+          <div class=" col-lg-12 col-md-12 text-center">
+            <div class="service-item" class="text-left">
+
+              <div class="first-col">
+
+                <span style="display: flex;width: 100;font-size: 19px;">inputs:</span>
+                <div class="inputs-item">
+                  <label>Rotation Direction: </label>
+
+                  <select name="cars" id="cars">
+                    <option value="volvo">CCW</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                </div>
+
+                <div class="inputs-item">
+                  <label>Vibration Unit: </label>
+                  <select name="cars" id="cars">
+                    <option value="volvo">mm/s</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                  </select>
+                </div>
+
+                <div class="inputs-item">
+                  <label>Temporary Trial Mass:</label>
+                  <div class="left-part">
+                    <span>mt= </span>
+                    <input type="text" class="">
+                    <select name="cars" id="cars">
+                      <option value="volvo">mm/s</option>
+                      <option value="saab">Saab</option>
+                      <option value="mercedes">Mercedes</option>
+                      <option value="audi">Audi</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="inputs-item">
+                  <label>Initial Run: </label>
+                  <div class="left-part">
+                    <span>v<sub>0</sub>=</span>
+                    <input type="text" class="">
+                    <span style="margin-left: 10px;">mm/s</span>
+                  </div>
+                </div>
+                <div class="inputs-item">
+                  <label>1st Trial Run Position</label>
+                  <div class="left-part">
+                    <span>v<sub>A</sub>=</span>
+                    <input type="text" class="">
+                    <span style="margin-left: 10px;">degree</span>
+                  </div>
+                </div>
+                <div class="inputs-item">
+                  <label>1st Trial Run vibration</label>
+                  <div class="left-part">
+                    <span>v<sub>B</sub>=</span>
+                    <input type="text" class="">
+                    <span style="margin-left: 10px;">mm/s</span>
+                  </div>
+                </div>
+                <div class="inputs-item">
+                  <label class="text-left">2nd Trial Run Position</label>
+                  <div class="left-part">
+                    <span>v<sub>C</sub>=</span>
+                    <input type="text" class="">
+                    <span style="margin-left: 10px;">degree</span>
+                  </div>
+                </div>
+                <div class="inputs-item">
+                  <label class="text-left">2nd Trial Run Vibration</label>
+                  <div class="left-part">
+                    <span>v<sub>C</sub>=</span>
+                    <input type="text" class="">
+                    <span style="margin-left: 10px;">mm/s</span>
+                  </div>
+                </div>
+                <div class="inputs-item">
+                  <label class="text-left">3nd Trial Run Position</label>
+                  <div class="left-part">
+                    <span>v<sub>C</sub>=</span>
+                    <input type="text" class="">
+                    <span style="margin-left: 10px;">degree</span>
+                  </div>
+                </div>
+                <div class="inputs-item">
+                  <label class="text-left">3nd Trial Run Vibration</label>
+                  <div class="left-part">
+                    <span>v<sub>C</sub>=</span>
+                    <input type="text" class="">
+                    <span style="margin-left: 10px;">mm/s</span>
+                  </div>
+                </div>
+
+                <div class="buttons-service-item">
+                  <button class="btn-service-item">Fill Sample Example</button>
+                  <button class="btn-service-item">Clear</button>
+                  <button class="btn-service-item">Calculate</button>
+                </div>
+              </div>
+              <div class="seccond-col">
+                <div class="insid-part-photo">
+                  <img src="assets/images/Arc.png">
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- section 4-form3 -->
+    <section class="section contact-me" data-section="">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Contact Me</h2>
+          <div class="line-dec"></div>
+          <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book</span>
+        </div>
+        <div class="row">
+          <div class="right-content">
+            <div class="container">
+              <form id="contact" action="" method="post">
+                <div class="row">
+                  <div class="col-md-6">
+                    <fieldset>
+                      <input name="name" type="text" class="form-control" id="name" placeholder="Your name..."
+                        required="" />
+                    </fieldset>
+                  </div>
+                  <div class="col-md-6">
+                    <fieldset>
+                      <input name="email" type="text" class="form-control" id="email" placeholder="Your email..."
+                        required="" />
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12">
+                    <fieldset>
+                      <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject..."
+                        required="" />
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12">
+                    <fieldset>
+                      <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..."
+                        required=""></textarea>
+                    </fieldset>
+                  </div>
+                  <div class="col-md-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="button">
+                        Send Message
+                      </button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/lightbox.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/formvalidation.js"></script>
+  <script>
+    //according to loftblog tut
+    $(".main-menu li:first").addClass("active");
+
+    var showSection = function showSection(section, isAnimate) {
+      var direction = section.replace(/#/, ""),
+        reqSection = $(".section").filter(
+          '[data-section="' + direction + '"]'
+        ),
+        reqSectionPos = reqSection.offset().top - 0;
+
+      if (isAnimate) {
+        $("body, html").animate({
+            scrollTop: reqSectionPos
+          },
+          800
+        );
+      } else {
+        $("body, html").scrollTop(reqSectionPos);
+      }
+    };
+
+    var checkSection = function checkSection() {
+      $(".section").each(function () {
+        var $this = $(this),
+          topEdge = $this.offset().top - 80,
+          bottomEdge = topEdge + $this.height(),
+          wScroll = $(window).scrollTop();
+        if (topEdge < wScroll && bottomEdge > wScroll) {
+          var currentId = $this.data("section"),
+            reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+          reqLink
+            .closest("li")
+            .addClass("active")
+            .siblings()
+            .removeClass("active");
+        }
+      });
+    };
+
+    $(".main-menu").on("click", "a", function (e) {
+      e.preventDefault();
+      showSection($(this).attr("href"), true);
+    });
+
+    $(window).scroll(function () {
+      checkSection();
+    });
+  </script>
+</body>
+
+</html>
